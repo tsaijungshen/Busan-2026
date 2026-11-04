@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2026 凱信大阪 散步帖</title>
+<title>2026-2027 釜山跨年 散步帖</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
@@ -321,14 +321,14 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
         <svg viewBox="0 0 64 64"><use href="#pal2"/></svg>
       </div>
       <div>
-        <h1>2026 凱信大阪 散步帖</h1>
-        <p id="headerSub">10/29（四）– 11/03（二）・吉依卡哇與夥伴們陪你走完每一天 ✨</p>
+        <h1>2026-2027 釜山跨年 散步帖</h1>
+        <p id="headerSub">12/29（二）– 01/05（二）・吉依卡哇與夥伴們陪你走完每一天 ✨</p>
       </div>
     </div>
     <div class="top-actions">
       <button class="chip" id="brandBtn" type="button" aria-pressed="false">🎀 切換三麗鷗版</button>
       <button class="chip" id="themeBtn" type="button">🌸 切換櫻花粉嫩</button>
-      <button class="chip" id="liveBtn" type="button" aria-pressed="false">🕒 對照日本現在時間</button>
+      <button class="chip" id="liveBtn" type="button" aria-pressed="false">🕒 對照韓國現在時間</button>
     </div>
   </header>
 
@@ -337,7 +337,7 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
 
   <section class="poster" id="poster" hidden aria-label="六日攻略地圖總覽">
     <div class="poster-banner">
-      <h2 class="poster-title" id="posterTitle">✨ 吉依卡哇帶你遊！大阪六日秋日攻略地圖 <small>(2026年10月29日 - 11月3日)</small> ✨</h2>
+      <h2 class="poster-title" id="posterTitle">✨ 吉依卡哇帶你遊！釜山八日跨年攻略地圖 <small>(2026年12月29日 - 1月5日)</small> ✨</h2>
     </div>
     <div class="poster-scroll"><div class="poster-grid" id="pgrid"></div></div>
     <div class="poster-footer">
@@ -351,7 +351,7 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
           <b>💡 貼心提醒 (Tips) & 出發前清單</b>
           <ul>
             <li><b>出發前清單</b>：護照、ICOCA、eSIM、日幣現金 / 信用卡</li>
-            <li><b>秋日穿著</b>：10月底～11月初早晚微涼，建議洋蔥式穿法＋好走的防滑散步鞋</li>
+            <li><b>秋日穿著</b>：12月底～1月初日夜溫差大，建議洋蔥式穿法＋防風外套</li>
             <li><b>行程注意</b>：預留交通銜接時間、注意店家營業時間與已預約餐廳時段</li>
           </ul>
         </div>
@@ -511,65 +511,75 @@ const SCENES=[
 
 /* ---------- 行程資料（p = 地圖上的示意位置）---------- */
 const DAYS=[
- {date:"2026-10-29",wd:"四",title:"抵達、心齋橋・道頓堀逛街",area:"關西機場 → 難波",total:10000,
+{date:"2026-12-29",wd:"二",title:"抵達釜山 & 租車出發",hotel:"住西面",
   stops:[
-   {t:"11:30",icon:"✈️",name:"抵達關西機場 (KIX)",short:"關西機場",p:[165,548],dur:"1 hr",map:"https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport"},
-   {t:"12:30",icon:"🚐",name:"包車到難波",short:"包車出發",mode:"車車",dur:"40 min"},
-   {t:"13:30",icon:"🏨",name:"飯店 Check-in、放行李",short:"飯店",p:[540,460],travel:50,mode:"包車",dur:"30 min",km:36},
-   {t:"14:00",icon:"🥞",name:"午餐：味乃家御好燒",sub:"Namba Okonomiyaki Ajinoya Honten",short:"味乃家",p:[700,430],travel:10,mode:"步行",dur:"1 hr",cost:2000,map:"https://maps.app.goo.gl/G7ijfDMQeRoEzyUq8"},
-   {t:"14:30",icon:"🛍️",name:"心齋橋筋商店街",short:"心齋橋筋",p:[560,190],travel:15,mode:"步行",dur:"3 hr",note:"PARCO（5F–6F 動漫 / 遊戲周邊）\nUNIQLO（衣服）\n#C-pla+ 大阪心斎橋筋店（扭蛋）\ngashacoco 心齋橋 BIGSTEP（扭蛋）\n橘街（衣服）\n大阪農林会館（衣服）\nFASCINATE_THE R（衣服）",tags:[{t:"重要‼️ Sanrio House / Sanrio Gift Shop",hot:true}],maps:[{label:"📍 PARCO",url:"https://www.google.com/maps/search/?api=1&query=心斎橋PARCO"},{label:"📍 UNIQLO 心斎橋",url:"https://www.google.com/maps/search/?api=1&query=UNIQLO+心斎橋店"},{label:"📍 #C-pla+",url:"https://www.google.com/maps/search/?api=1&query=C-pla+大阪心斎橋筋店"},{label:"📍 gashacoco BIGSTEP",url:"https://www.google.com/maps/search/?api=1&query=gashacoco+心斎橋BIGSTEP"},{label:"📍 橘街",url:"https://www.google.com/maps/search/?api=1&query=橘街+心斎橋"},{label:"📍 大阪農林会館",url:"https://www.google.com/maps/search/?api=1&query=大阪農林会館"},{label:"📍 FASCINATE_THE R",url:"https://www.google.com/maps/search/?api=1&query=FASCINATE_THE+R+心斎橋"},{label:"📍 Sanrio House 心斎橋",url:"https://www.google.com/maps/search/?api=1&query=Sanrio+House+心斎橋"},{label:"📍 Sanrio Gift Shop 心斎橋",url:"https://www.google.com/maps/search/?api=1&query=サンリオギフトゲート+心斎橋"}]},
-   {t:"19:30",icon:"🥩",name:"晚餐：燒肉 Kurumi 心齋橋本店",sub:"Yakiniku Kurumi Shinsaibashi Main Store",short:"燒肉 Kurumi",p:[790,250],travel:10,mode:"步行",dur:"1.5 hr",cost:8000,tags:[{t:"訂好位"}],map:"https://maps.app.goo.gl/51nMcABZjjw2A5qx6"},
-   {t:"20:00",icon:"🧳",name:"逛街",short:"逛街",p:[360,260],travel:8,mode:"步行",dur:"1 hr",note:"藥妝：Sugi Drug\n行李箱：M coin’s 心斎橋本店\n超市：LIFE 中央廣場 難波店",maps:[{label:"📍 Sugi Drug 地圖",url:"https://www.google.com/maps/search/?api=1&query=Sugi+Drug+Shinsaibashi"},{label:"📍 M coin’s 地圖",url:"https://www.google.com/maps/search/?api=1&query=M+coin%27s+心斎橋本店"},{label:"📍 LIFE 難波店",url:"https://www.google.com/maps/search/?api=1&query=ライフ+セントラルスクエア+なんば店"}]}
+   {t:"18:00",icon:"✈️",name:"出關後換釜山 PASS 實體卡",note:"順利出關並領取實體卡"},
+   {t:"19:00",icon:"🚗",name:"租車辦理",note:"完成取車手續"},
+   {t:"20:30",icon:"🍔",name:"晚餐：Shake Shack (20:30~21:30)",note:"享用美味晚餐"}
   ]},
- {date:"2026-10-30",wd:"五",title:"梅田 / 環球影城（分組行動）",area:"梅田 / 環球影城",total:7000,
-  teams:[{id:"A",name:"🎢 USJ 組",pals:[0,1,2]},{id:"B",name:"🛍️ 梅田組",pals:[3,4,5]}],
+ {date:"2026-12-30",wd:"三",title:"南浦洞 & 燒肉巡禮",hotel:"住西面",
   stops:[
-   {t:"07:00",icon:"🏨",name:"飯店出發",short:"飯店",p:[640,560]},
-   {t:"07:30",team:"A",icon:"🎢",name:"出發前往 USJ",short:"USJ",p:[300,410],travel:30,mode:"JR 環狀線 → 櫻島線",km:10,note:"一整天午餐晚餐園區",map:"https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan"},
-   {t:"10:00",team:"B",icon:"🛍️",name:"梅田逛街",short:"梅田",p:[640,180],travel:35,mode:"電車",km:6,note:"KITH 大阪\nLUCUA\n　・BEAMS UMEDA 3F\n　・FREAK’S STORE 7F\n　・URBAN RESEARCH 7F\n　・STUDIOUS MENS 7F\nHEP FIVE\n　・BEAMS STREET 1F\n　・Aland 2F\n　・Stussy 5F\n　・HARE 5F\n　・RAGEBLUE 5F\nLOFTMAN COOP UMEDA",maps:[{label:"📍 KITH 大阪",url:"https://www.google.com/maps/search/?api=1&query=KITH+Osaka"},{label:"📍 LUCUA",url:"https://www.google.com/maps/search/?api=1&query=LUCUA+Osaka"},{label:"📍 HEP FIVE",url:"https://www.google.com/maps/search/?api=1&query=HEP+FIVE"},{label:"📍 LOFTMAN COOP UMEDA",url:"https://www.google.com/maps/search/?api=1&query=LOFTMAN+COOP+UMEDA"}]},
-   {t:"12:00",team:"B",icon:"🍣",name:"午餐：大阪泉佐野港 活鮨",sub:"Osaka Izumisano Port Katsu Sushi",short:"活鮨",p:[830,230],travel:10,mode:"步行",cost:3000,tags:[{t:"已訂位"}],map:"https://maps.app.goo.gl/iz4F4WonJfeJGte38"},
-   {t:"18:30",team:"B",icon:"🔥",name:"晚餐：力丸 炉ばた焼 漁火",sub:"Isaribi",short:"漁火",p:[760,360],travel:12,mode:"步行",cost:4000,tags:[{t:"已訂位"}],map:"https://maps.app.goo.gl/39BdEuRRstzjNRVB9"}
+   {t:"09:00",icon:"🥐",name:"早餐：Eggdrop / Diart / 釜田市場",note:"田浦咖啡街散步"},
+   {t:"11:00",icon:"🥩",name:"午餐：豚笑-南浦店（11點準時預約）",sub:"豚笑-南浦預約(12:00線上預約?)",tags:[{t:"需預約",hot:true}]},
+   {t:"13:30",icon:"🛍️",name:"樂天百貨辦會員卡",note:"辦理樂天百貨會員卡"},
+   {t:"14:30",icon:"🛒",name:"BIFF 廣場 / 富平罐頭市場 Miglet / 國際市場",note:"光復路商店街逛街\n樂天百貨南浦 10:30~21:00 (柯達)"},
+   {t:"19:00",icon:"🦀",name:"晚餐：札嘎其市場帝王蟹100號",tags:[{t:"必吃海鮮",hot:true}]}
   ]},
- {date:"2026-10-31",wd:"六",title:"逛街",area:"難波 / 電器街",total:15000,
+ {date:"2026-12-31",wd:"四",title:"影島景點 & 廣安里跨年",hotel:"住西面",
   stops:[
-   {t:"08:30",icon:"🏨",name:"飯店出發",short:"飯店",p:[530,420]},
-   {t:"09:00",icon:"🐧",name:"唐吉訶德",short:"唐吉訶德",p:[300,330],travel:10,mode:"步行",map:"https://maps.app.goo.gl/autfdXTrHsR8SfSD7"},
-   {t:"12:00",icon:"🍜",name:"午餐：Nishiya 烏龍麵",short:"Nishiya",p:[560,130],travel:15,mode:"步行",cost:2000,tags:[{t:"已訂位"}],map:"https://maps.app.goo.gl/QAAib3xZiaHQgjHQ7"},
-   {t:"12:30",icon:"🦀",name:"黒門市場",short:"黒門市場",p:[780,370],travel:15,mode:"步行",map:"https://www.google.com/maps/search/?api=1&query=黒門市場"},
-   {t:"13:30",icon:"🎌",name:"梅田 / 電器街",short:"電器街",p:[780,590],travel:10,mode:"步行",note:"DIY 食物模型 Design Pocket\n紅豆麻糬 玉製家和菓子\n— Ota Road 逛法：先走東側由北往南 ①→⑥，到 Mandarake 過馬路，再沿西側由南往北 ⑦→⑨，不用來回穿越",maps:[{label:"📍 Design Pocket",url:"https://www.google.com/maps/search/?api=1&query=デザインポケット+大阪"},{label:"📍 玉製家",url:"https://www.google.com/maps/search/?api=1&query=玉製家+大阪"},{label:"【東側・往南】① Gacha-gacha no Mori",url:"https://maps.app.goo.gl/oRCNZavdHZ8Uz4E68"},{label:"② Jungle Mecha Store",url:"https://maps.app.goo.gl/s8mKV9xQnycqAZSa6"},{label:"③ Jungle",url:"https://maps.app.goo.gl/XrYSoagxBcDEdrWw7"},{label:"④ Guf Nipponbashi",url:"https://maps.app.goo.gl/hzVyqhrHD5tj3uUE9"},{label:"⑤ VOLKS Showroom",url:"https://maps.app.goo.gl/QqAVs3s6bHkyWpVj9"},{label:"⑥ Mandarake",url:"https://maps.app.goo.gl/WSoTnbyid8dzrx8C8"},{label:"【過馬路→西側・往北】⑦ Lashinbang 2号店",url:"https://maps.app.goo.gl/Lqu6niwaCHVBA62x9"},{label:"⑧ Animate 日本橋店",url:"https://maps.app.goo.gl/S1VwWNP3XW4G7vJL7"},{label:"⑨ SURUGA-YA Ota-Road",url:"https://maps.app.goo.gl/QkbkhPQW3Rdz22ix8"}]},
-   {t:"15:30",icon:"🎰",name:"柏青哥",short:"柏青哥",p:[520,600],travel:15,mode:"步行",cost:5000,map:"https://maps.app.goo.gl/Zd9k6ikHEtFcakMp8"},
-   {t:"19:30",icon:"🍲",name:"晚餐：しゃぶ長 Shabucho",short:"しゃぶ長",p:[230,480],travel:12,mode:"步行",cost:8000,tags:[{t:"已訂位"}],map:"https://maps.app.goo.gl/B7NkBYnBeFqQQ1nc7"}
+   {t:"09:00",icon:"🥣",name:"早餐：大海鮑魚粥 釜山店"},
+   {t:"10:30",icon:"🌊",name:"白淺灘文化村",note:"海岸隧道、彩虹階梯（排隊人潮多，建議早上上去）"},
+   {t:"12:30",icon:"🥩",name:"午餐：巨人王豬排 / 影島海女村吃海鮮"},
+   {t:"14:30",icon:"🌉",name:"五六島天空步道 & 二位臺",note:"海景步道漫步"},
+   {t:"17:30",icon:"🏬",name:"樂天百貨釜山總店 (10:30~21:00)",note:"逛街購物，逛西面地下街（不要逛南浦洞地下街）"},
+   {t:"19:00",icon:"🥩",name:"晚餐：老宅邸燒肉"},
+   {t:"23:30",icon:"🎆",name:"廣安里無人機表演",note:"在飯店看直播或現場跨年！",tags:[{t:"跨年重頭戲",hot:true}]}
   ]},
- {date:"2026-11-01",wd:"日",title:"神戶",area:"神戶 → 通天閣",total:13000,
+ {date:"2027-01-01",wd:"五",title:"海雲台 & 市區展覽",hotel:"住西面",
   stops:[
-   {t:"08:00",icon:"🏨",name:"飯店出發",short:"飯店",p:[850,420]},
-   {t:"09:00",icon:"⛩️",name:"生田神社",short:"生田神社",p:[130,300],travel:55,mode:"電車",km:32,map:"https://www.google.com/maps/search/?api=1&query=生田神社"},
-   {t:"11:30",icon:"🐂",name:"午餐：神戶牛 Kobe Beef Steak Ishida.",sub:"生田新道店 / 本店",short:"神戶牛 Ishida",p:[330,220],travel:10,mode:"步行",cost:10000,note:"本店 3 人 / 分店 6 人",maps:[{label:"📍 本店 地圖",url:"https://maps.app.goo.gl/R9PqqTCzFkKYihdW7"},{label:"📍 生田新道店 地圖",url:"https://maps.app.goo.gl/4Kpe8erkdVPu8nEm7"}]},
-   {t:"13:00",icon:"🛍️",name:"神戶三宮中心街",sub:"Sannomiya Center Gai Shopping Street",short:"三宮中心街",p:[380,370],travel:10,mode:"步行",note:"逛街",map:"https://maps.app.goo.gl/N5szNKHHGT5mdeq79"},
-   {t:"14:30",icon:"☕",name:"沒行程",short:"自由時間"},
-   {t:"17:00",icon:"🍣",name:"晚餐：すし酒場 さしす",sub:"Sushi Sakaba Sashisu",short:"さしす",p:[170,420],travel:12,mode:"步行",cost:3000,note:"不要吃太飽，等等吃炸串",map:"https://maps.app.goo.gl/nWpBT241AyJBDZ596"},
-   {t:"18:30",icon:"🍢",name:"通天閣吃炸串（特別完美）",short:"通天閣",p:[780,560],travel:55,mode:"電車",km:30,map:"https://www.google.com/maps/search/?api=1&query=通天閣"}
+   {t:"09:00",icon:"🥯",name:"早餐：All Sunday"},
+   {t:"10:30",icon:"🎨",name:"釜山油畫展"},
+   {t:"12:30",icon:"🍲",name:"午餐：小香燉牛肋條 / 31cm / 嚴泉湧豬肉湯飯"},
+   {t:"14:30",icon:"🛍️",name:"海雲台傳統市場 & 海雲台海水浴場",note:"順遊新世界百貨 Centum City 店 & 樂天超市 (Lotte Mart)"},
+   {t:"18:30",icon:"🍝",name:"晚餐：Cor pasta bar"},
+   {t:"20:30",icon:"🌃",name:"荒嶺山觀景台",note:"欣賞釜山千萬夜景",tags:[{t:"絕美夜景",hot:true}]}
   ]},
- {date:"2026-11-02",wd:"一",title:"伏見稻荷、清水寺",area:"京都",total:3000,
+ {date:"2027-01-02",wd:"六",title:"甘川洞 & 松島纜車 & 汗蒸幕",hotel:"住廣安里橘子",
   stops:[
-   {t:"09:00",icon:"🚐",name:"出發前往京都",short:"飯店出發",p:[120,600],mode:"包車",dur:"1 hr"},
-   {t:"10:00",icon:"🏯",name:"清水寺、二年坂・三年坂",short:"清水寺",p:[860,250],travel:55,mode:"包車",dur:"2 hr",km:50,map:"https://www.google.com/maps/search/?api=1&query=清水寺"},
-   {t:"12:00",icon:"💰",name:"御金神社",short:"御金神社",p:[520,130],travel:20,mode:"包車",dur:"0.5 hr",note:"自備台幣鈔票洗錢、衛生紙擦乾",map:"https://www.google.com/maps/search/?api=1&query=御金神社"},
-   {t:"13:00",icon:"🍡",name:"午餐：錦市場 走走吃吃",short:"錦市場",p:[650,230],travel:15,mode:"包車",dur:"2 hr",cost:3000,map:"https://www.google.com/maps/search/?api=1&query=錦市場"},
-   {t:"15:00",icon:"⛩️",name:"伏見稻荷大社 千本鳥居",short:"伏見稻荷",p:[720,460],travel:25,mode:"包車",dur:"2 hr",map:"https://www.google.com/maps/search/?api=1&query=伏見稲荷大社"},
-   {t:"17:00",icon:"🚐",name:"返回大阪",short:"返回大阪",mode:"包車",dur:"1 hr"},
-   {t:"18:30",icon:"🍽️",name:"晚餐：（待定）",short:"晚餐",p:[330,610],travel:75,mode:"包車",dur:"1 hr",km:45}
-  ],
-  links:[{label:"▶ 參考影片",url:"https://www.youtube.com/watch?v=7-fQg8mWILE&t"}]},
- {date:"2026-11-03",wd:"二",title:"回家",area:"道頓堀 → 關西機場",total:10000,
-  teams:[{id:"A",name:"✈️ 直接機場組（5 人）",pals:[0,1,2]},{id:"B",name:"🦀 蟹道樂組",pals:[3,4,5]}],
+   {t:"09:00",icon:"🥪",name:"早餐：Eggdrop"},
+   {t:"09:30",icon:"🎨",name:"甘川洞文化村 (手翻書)",note:"小王子拍照 09:30到 (10:30開卡)",tags:[{t:"熱門景點",hot:true}]},
+   {t:"12:30",icon:"🍕",name:"午餐：李在模披薩本店 (2號店)"},
+   {t:"14:30",icon:"🌁",name:"松島龍宮雲橋 & 松島海上纜車"},
+   {t:"16:30",icon:"🌳",name:"太宗台 & Art museum"},
+   {t:"18:30",icon:"🗼",name:"釜山塔 (10:00~22:00)"},
+   {t:"19:30",icon:"🍖",name:"晚餐：釜山烤肋排-西面店"},
+   {t:"21:30",icon:"♨️",name:"Hotel Aqua spa 24HR",note:"汗蒸幕放鬆",tags:[{t:"搬家換飯店"}]}
+  ]},
+ {date:"2027-01-03",wd:"日",title:"天空膠囊列車 & 鑽石遊艇",hotel:"住廣安里橘子",
   stops:[
-   {t:"10:00",icon:"🏨",name:"飯店 Check-out",short:"Check-out",p:[640,190]},
-   {t:"10:30",team:"A",icon:"✈️",name:"直接前往關西機場、退稅、登機",short:"關西機場",p:[195,540],travel:55,km:50,note:"Check-out 後直接出發",map:"https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport"},
-   {t:"12:00",team:"B",icon:"🦀",name:"午餐：蟹道樂 道頓堀東店",sub:"Kani Doraku Dotonbori East",short:"蟹道樂",p:[820,330],travel:10,mode:"步行",cost:10000,map:"https://maps.app.goo.gl/794bmZbScFL63hdPA"},
-   {t:"16:00",team:"B",icon:"✈️",name:"前往關西機場、退稅、登機",short:"關西機場",p:[195,540],travel:55,mode:"包車",km:50,map:"https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport"}
+   {t:"09:00",icon:"☕",name:"早餐：Working holiday"},
+   {t:"10:30",icon:"🚃",name:"天空膠囊列車",note:"海岸列車（青沙浦拍照攻略）",tags:[{t:"必搭列車",hot:true}]},
+   {t:"12:30",icon:"🥩",name:"午餐：小香燉牛肋條 / 31cm / 嚴泉湧豬肉湯飯"},
+   {t:"14:30",icon:"🏢",name:"Busan X the Sky",note:"登高俯瞰海景"},
+   {t:"18:30",icon:"🥩",name:"晚餐：Gohasun-廣安店"},
+   {t:"20:30",icon:"⛵",name:"鑽石遊艇 (夜間版)",note:"夜間海上看廣安大橋",tags:[{t:"夜間遊艇",hot:true}]}
+  ]},
+ {date:"2027-01-04",wd:"一",title:"樂天世界 & 東釜山 Outlet 採買",hotel:"住廣安里橘子",
+  stops:[
+   {t:"09:00",icon:"🍲",name:"早餐：水邊最高豬肉湯飯 (民樂店)"},
+   {t:"10:30",icon:"🎡",name:"樂天世界 (換票) & 釜山 Brick Campus"},
+   {t:"13:30",icon:"🛍️",name:"Lotte Premium Outlets 東釜山店",note:"要去哪裡玩攻略"},
+   {t:"18:30",icon:"🥩",name:"晚餐：廣安木烤肉-廣安店"},
+   {t:"20:30",icon:"🌃",name:"荒嶺山觀景台",note:"再次欣賞夜景"}
+  ]},
+ {date:"2027-01-05",wd:"二",title:"最後採買 & 愉快返家",hotel:"準備返家",
+  stops:[
+   {t:"09:00",icon:"🥐",name:"早餐：自由享用"},
+   {t:"10:30",icon:"🛍️",name:"沿著西面地下街採買",note:"雙條都是兩排衣服店，輕鬆逛"},
+   {t:"12:30",icon:"🍱",name:"午餐：Nasari Sigdang"},
+   {t:"15:00",icon:"✈️",name:"前往金海機場辦理登機",note:"平安返家！"}
   ]}
-];
+  ];
 
 const W=1000,H=680;
 const $=s=>document.getElementById(s);
@@ -626,7 +636,7 @@ function renderTabs(){
   const today=tokyoNow().date;
   const all=document.createElement("button");all.type="button";all.className="ticket";all.id="tabAll";all.setAttribute("role","tab");
   all.setAttribute("aria-selected",posterOn?"true":"false");
-  const mapLabel=brand==="sanrio"?"三麗鷗六日地圖":"吉依卡哇六日地圖";
+  const mapLabel=brand==="sanrio"?"三麗鷗八日地圖":"吉依卡哇八日地圖";
   all.innerHTML=`<b>🗺️ 總覽</b><span>${mapLabel}</span>`;all.onclick=showPoster;nav.appendChild(all);
   DAYS.forEach((d,i)=>{
     const b=document.createElement("button");b.type="button";b.className="ticket";b.setAttribute("role","tab");
