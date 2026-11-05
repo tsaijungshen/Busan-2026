@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2026-2027 釜山跨年 散步帖</title>
+<title>2026 釜山 散步帖</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
@@ -128,6 +129,7 @@ ol.stops::before{content:"";position:absolute;left:60px;top:12px;bottom:12px;bor
 .links{margin-top:6px;display:flex;gap:8px;flex-wrap:wrap}
 .links a{font-size:13px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--pink)}
 .links.stack{flex-direction:column;align-items:flex-start;gap:6px}
+.r{color:var(--red)}
 .empty-row .card{border-style:dashed;cursor:default;background:var(--paper)}
 
 /* svg map */
@@ -267,6 +269,61 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
 .tips ul{margin:0;padding-left:1.2em}
 .tips li{margin-bottom:2px}
 @media (prefers-reduced-motion:reduce){.vig{transition:none}}
+
+/* round 2: 總覽縮小、地圖縮小、行程列表放大 */
+.page{grid-template-columns:minmax(0,.95fr) minmax(0,1.45fr)}
+.mapcard{max-width:520px}
+@media(min-width:881px){.mapcard{position:sticky;top:10px}}
+@media(max-width:880px){.mapcard{margin:0 auto;width:100%}}
+.m-pin .lab text{font-size:17px}
+.stop{grid-template-columns:96px 1fr;margin-bottom:14px}
+.stop .t{font-size:19px;padding-top:12px;padding-right:30px;line-height:1.1}
+.stop .t small{display:block;font-size:11.5px;color:var(--ink2);font-weight:700;margin-bottom:2px}
+.stop .t::after{left:78px;top:21px;width:15px;height:15px}
+ol.stops::before{left:85px}
+.card{padding:13px 16px}
+.card .name{font-size:19px;line-height:1.4}
+.card .sub,.card .note{font-size:15.5px}
+.tag{font-size:13.5px}
+.links a{font-size:15.5px}
+.poster-banner{padding:10px 16px;margin-bottom:12px}
+.poster-title{font-size:clamp(17px,2.4vw,24px)}
+.poster-grid{grid-template-columns:repeat(8,minmax(104px,1fr));gap:10px;min-width:900px}
+.pcol h3{font-size:11.5px;margin-bottom:12px;padding:4px 6px;border-radius:12px}
+.pcol h3 .sub-date{font-size:10.5px}
+.pitem{margin-bottom:16px}
+.vig{width:58px;height:54px}
+.vig .emo{font-size:26px}
+.vig svg.art{width:46px;height:46px}
+.vig svg.pal{width:28px;height:28px;right:-12px;bottom:-6px}
+.vig svg.pal.left{right:auto;left:-12px}
+.pcol svg.walker{width:32px;height:32px}
+.pitem .nm{font-size:11.5px;margin-top:4px}
+.pitem .tm{font-size:10.5px}
+.pitem .ex{font-size:10px;max-width:104px}
+.poster{padding-bottom:14px}
+.poster-hint{font-size:12px;padding:6px 10px}
+.tips{padding:8px 12px;font-size:12px}
+.parking{margin-top:28px;background:var(--paper);border:3px solid var(--ink);border-radius:24px;padding:16px 18px 20px;box-shadow:0 6px 0 rgba(74,58,42,.1)}
+.parking h2{margin:0 0 4px;font-family:"Zen Maru Gothic","Huninn",sans-serif;font-weight:900;font-size:clamp(20px,3vw,26px)}
+.parking .src{color:var(--ink2);font-size:14px;margin:0 0 14px;line-height:1.6}
+.parking .src a{font-weight:700;color:var(--ink);border-bottom:2px solid var(--pink);text-decoration:none}
+.pk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.pk-card{border:2.5px solid var(--ink);border-radius:16px;padding:12px 14px;background:var(--bg)}
+.pk-card h3{margin:0 0 8px;font-size:17px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pk-card h3 small{font-size:12.5px;color:var(--ink2);font-weight:700}
+.pk-card ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.pk-card li{font-size:15px;line-height:1.5}
+.pk-card li .d{display:block;font-size:13.5px;color:var(--ink2)}
+.pk-card li a{font-weight:700;font-size:13.5px;text-decoration:none;border-bottom:2px solid var(--pink);margin-left:8px;white-space:nowrap}
+.tk{margin-top:8px;border:2px dashed var(--ink);border-radius:12px;padding:8px 12px;background:var(--bg);color:var(--ink)}
+.tk-h{font-weight:700;font-size:14.5px;margin-bottom:4px}
+.tk-b{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tk-b div b{display:block;font-size:24px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tk-b div span{font-size:13.5px;color:var(--ink2)}
+.tk-a{font-size:22px;color:var(--ink2)}
+.tk-n{margin-top:5px;font-size:12px;color:var(--ink2)}
+.pk-tip{margin-top:9px;font-size:13px;color:var(--ink2);background:var(--blob2);border-radius:10px;padding:6px 10px}
 </style>
 </head>
 <body>
@@ -321,8 +378,8 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
         <svg viewBox="0 0 64 64"><use href="#pal2"/></svg>
       </div>
       <div>
-        <h1>2026-2027 釜山跨年 散步帖</h1>
-        <p id="headerSub">12/29（二）– 01/05（二）・吉依卡哇與夥伴們陪你走完每一天 ✨</p>
+        <h1>2026 釜山 散步帖</h1>
+        <p id="headerSub">12/29（二）– 1/5（二）・吉依卡哇與夥伴們陪你走完每一天 ✨</p>
       </div>
     </div>
     <div class="top-actions">
@@ -335,9 +392,9 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
 
   <nav class="days" id="days" role="tablist" aria-label="選擇天數"></nav>
 
-  <section class="poster" id="poster" hidden aria-label="六日攻略地圖總覽">
+  <section class="poster" id="poster" hidden aria-label="八日攻略地圖總覽">
     <div class="poster-banner">
-      <h2 class="poster-title" id="posterTitle">✨ 吉依卡哇帶你遊！釜山八日跨年攻略地圖 <small>(2026年12月29日 - 1月5日)</small> ✨</h2>
+      <h2 class="poster-title" id="posterTitle">✨ 吉依卡哇帶你遊！釜山八日冬日攻略地圖 <small>(2026年12月29日 - 2027年1月5日)</small> ✨</h2>
     </div>
     <div class="poster-scroll"><div class="poster-grid" id="pgrid"></div></div>
     <div class="poster-footer">
@@ -350,9 +407,9 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
         <div class="tips">
           <b>💡 貼心提醒 (Tips) & 出發前清單</b>
           <ul>
-            <li><b>出發前清單</b>：護照、ICOCA、eSIM、日幣現金 / 信用卡</li>
-            <li><b>秋日穿著</b>：12月底～1月初日夜溫差大，建議洋蔥式穿法＋防風外套</li>
-            <li><b>行程注意</b>：預留交通銜接時間、注意店家營業時間與已預約餐廳時段</li>
+            <li><b>出發前清單</b>：護照、釜山PASS、eSIM、韓元現金 / 信用卡、租車證件</li>
+            <li><b>冬日穿著</b>：12月底～1月初海邊風大，建議保暖外套＋手套圍巾＋好走的防滑鞋</li>
+            <li><b>行程注意</b>：豚笑南浦店需準時預約；留意各店營業時間與交通銜接時間</li>
           </ul>
         </div>
       </div>
@@ -379,7 +436,8 @@ svg.plinks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
       <ol class="stops" id="stops"></ol>
     </section>
   </main>
-  <footer id="footerText">✨ 吉依卡哇主題手帳版・地點座標為示意位置，出發前請以 Google 地圖連結為準 ✨</footer>
+  <section class="parking" id="parking" aria-label="停車整理"><h2>🅿️ 各大區域停車整理</h2><p class="src">依 Koro（koreabycar.com）釜山自駕指南整理，沒有收錄的區域請用 NAVER 查詢；費用以現場公告為準。更多可到 <a href="https://www.koreabycar.com/zh-hant/plan/parking" target="_blank" rel="noopener">Koro 停車場查詢</a>。</p><div class="pk-grid" id="pkGrid"></div></section>
+<footer id="footerText">✨ 吉依卡哇主題手帳版・地點座標為示意位置，出發前請以 Google 地圖連結為準 ✨</footer>
 </div>
 <div class="toast" id="toast" role="status"></div>
 
@@ -456,118 +514,123 @@ const dood=(list)=>list.map(([t,x,y,sc=1])=>`<g transform="translate(${x},${y}) 
 const lbls=(list)=>list.map(([t,x,y])=>`<text class="bg-lbl" x="${x}" y="${y}" text-anchor="middle">${t}</text>`).join("");
 const area=(list)=>list.map(([t,x,y])=>`<text class="m-area" x="${x}" y="${y}" text-anchor="middle">${t}</text>`).join("");
 
-const SEA_KIX="M0 330 Q110 350 190 420 Q260 490 290 560 Q300 620 330 680 L0 680Z";
-const SCENES=[
- // Day1 金海機場 → 西面
- ()=>`<path class="bg-sea" d="${SEA_BUSAN}"/>${waves([[40,400],[90,460],[30,610]])}
-     <rect class="bg-island" x="80" y="515" width="170" height="70" rx="18"/>
-     <path class="bg-road" d="M560 20 V660"/><path class="bg-road" d="M300 520 Q420 470 1000 520"/>
-     ${dood([["plane",130,470],["tower",900,600,.9],["cloud",420,60],["sparkle",230,220]])}
-     ${lbls([["洛東江",880,338],["西面大道",590,640]])}
-     ${area([["金海機場",165,630],["西面",720,560]])}`,
-  // Day 2 南浦洞
-  ()=>`<path class="bg-sea" d="M0 0 H140 Q110 160 190 250 Q130 360 210 460 H0Z"/>${waves([[30,120],[70,300]])}
-     <path class="bg-road" d="M240 420 Q420 380 590 460"/>
-     ${dood([["bus",470,170,.9],["ship",80,210],["cloud",300,100]])}
-     ${area([["南浦洞",700,90],["札嘎其",320,590]])}`,
-  // Day 3 影島與廣安里跨年
-  ()=>`<path class="bg-river" d="M0 250 Q300 215 520 255 T1000 235"/>
-     <path class="bg-road" d="M430 20 V660"/>
-     ${dood([["tower",900,620,.8],["sparkle",460,290]])}
-     ${area([["影島",250,100],["廣安里",640,310]])}`,
-  // Day 4 海雲台與荒嶺山
-  ()=>`<path class="bg-sea" d="M0 480 Q250 440 420 490 H0Z"/>${waves([[80,560],[200,620]])}
-     ${dood([["ship",250,520],["cloud",620,80]])}
-     ${area([["海雲台",420,400],["荒嶺山",840,300]])}`,
-  // Day 5 甘川洞與松島
-  ()=>`<path class="bg-river" d="M760 600 Q560 470 380 520 T0 520"/>
-     ${dood([["ferris",880,370,.9],["castle",420,640,.8]])}
-     ${area([["甘川洞",640,420],["松島",170,520]])}`,
-  // Day 6 天空膠囊列車與遊艇
-  ()=>`<path class="bg-sea" d="${SEA_BUSAN}"/>${waves([[40,400],[90,460]])}
-     ${dood([["ship",150,440],["tower",880,560,.9]])}
-     ${area([["青沙浦",700,110],["廣安大橋",195,620]])}`,
-  // Day 7 樂天世界與 Outlet
-  ()=>`<path class="bg-sea" d="${SEA_BUSAN}"/>${waves([[30,610]])}
-     ${dood([["castle",380,600,.7],["sparkلe",420,310]||["sparkle",420,310]])}
-     ${area([["機張",700,110],["東釜山",195,620]])}`,
-  // Day 8 西面返家
-  ()=>`<path class="bg-sea" d="${SEA_BUSAN}"/>${waves([[40,400]])}
-     ${dood([["plane",150,440],["bus",900,170]])}
-     ${area([["西面",700,110],["金海機場",195,620]])}`
-];
+const SEA_E="M1000 40 Q940 140 925 250 Q900 330 820 370 Q730 400 690 450 Q650 500 600 540 Q520 590 430 600 Q380 610 350 680 H1000Z";
+const SEA_W="M0 360 Q110 380 120 450 Q130 540 220 600 Q250 650 240 680 H0Z";
+const BUSAN=()=>`<path class="bg-sea" d="${SEA_E}"/><path class="bg-sea" d="${SEA_W}"/>${waves([[760,520],[880,470],[940,610],[650,640],[60,520],[30,630]])}
+ ${mts([[540,340,150,100],[300,120,200,90],[760,160,150,80]])}
+ <path class="bg-river" d="M215 420 Q290 470 360 520"/>
+ <path class="bg-road" d="M400 250 Q520 330 640 340 T860 330"/><path class="bg-road" d="M400 250 Q360 340 350 400"/>
+ ${dood([["plane",95,160],["cloud",330,60,.8],["cloud",690,45],["ship",470,650,.9],["ship",830,520,.7],["sparkle",600,200],["sparkle",250,300,.8]])}
+ ${lbls([["南海",760,610],["釜山港",300,470]])}
+ ${area([["金海機場",180,65],["西面",400,210],["南浦洞",330,350],["影島",120,650],["廣安里",600,385],["海雲台",800,390],["機張",760,50]])}`;
+const SCENES=Array(8).fill(BUSAN);
 
 /* ---------- 行程資料（p = 地圖上的示意位置）---------- */
+const TK=(dir,date,t1,c1,t2,c2)=>`<div class="tk"><div class="tk-h">✈️ ${dir}　${date}</div><div class="tk-b"><div><b>${t1}</b><span>${c1}</span></div><div class="tk-a">→</div><div><b>${t2}</b><span>${c2}</span></div></div><div class="tk-n">依原表格機票整理，航班號／航廈請以電子機票為準</div></div>`;
+const L={air:[180,120],seo:[400,250],lotteS:[470,185],underS:[330,235],jeon:[450,310],cafe:[520,300],nasari:[480,250],abal:[380,195],sbbq:[300,180],galbi:[290,320],allsun:[790,215],
+ biff:[255,385],nampo:[350,385],tower:[440,400],lotteN:[430,475],gwang:[350,470],jaga:[290,540],pizza:[380,535],eggN:[305,345],
+ gam:[170,385],songB:[135,455],songC:[160,495],huin:[170,555],haenyeo:[255,590],taejong:[350,625],artm:[190,625],rainbow:[215,520],songL:[225,440],oryuk:[560,520],igi:[600,465],
+ hwang:[540,365],shop:[565,295],hotelG:[620,335],cor:[700,320],gohasun:[610,395],bbq:[560,430],work:[660,450],gbeach:[675,420],spa:[665,385],millak:[735,415],yacht:[800,420],
+ lunchB:[650,255],hmarket:[790,215],centum:[725,290],xsky:[805,285],hbeach:[870,325],josun:[820,350],brick:[880,260],lmart:[760,355],train:[895,215],capsule:[850,160],lotteW:[760,90],outlet:[660,90],yong:[870,100],yuhwa:[820,350]};
+L.allsun=[800,230];
+const NV=q=>"https://map.naver.com/p/search/"+encodeURIComponent(q);
+const S=(t,icon,name,short,loc,o={})=>{const r={t,icon,name,short,p:L[loc],...o};
+ if(typeof o.n==="string")r.map=NV(o.n);else if(Array.isArray(o.n))r.maps=o.n.map(([l,q])=>({label:"📍 NAVER："+l,url:NV(q)}));return r};
+const HOT=t=>[{t:t,hot:true}];
+const PK=t=>"🅿️ 停車區域："+t+"（詳見頁面最下方停車整理）";
+const HOTELS="부산광역시 남구 문현동 659-6", HOTELG="부산광역시 수영구 민락로27번길 30";
 const DAYS=[
-{date:"2026-12-29",wd:"二",title:"抵達釜山 & 租車出發",hotel:"住西面",
-  stops:[
-   {t:"18:00",icon:"✈️",name:"出關後換釜山 PASS 實體卡",note:"順利出關並領取實體卡"},
-   {t:"19:00",icon:"🚗",name:"租車辦理",note:"完成取車手續"},
-   {t:"20:30",icon:"🍔",name:"晚餐：Shake Shack (20:30~21:30)",note:"享用美味晚餐"}
-  ]},
- {date:"2026-12-30",wd:"三",title:"南浦洞 & 燒肉巡禮",hotel:"住西面",
-  stops:[
-   {t:"09:00",icon:"🥐",name:"早餐：Eggdrop / Diart / 釜田市場",note:"田浦咖啡街散步"},
-   {t:"11:00",icon:"🥩",name:"午餐：豚笑-南浦店（11點準時預約）",sub:"豚笑-南浦預約(12:00線上預約?)",tags:[{t:"需預約",hot:true}]},
-   {t:"13:30",icon:"🛍️",name:"樂天百貨辦會員卡",note:"辦理樂天百貨會員卡"},
-   {t:"14:30",icon:"🛒",name:"BIFF 廣場 / 富平罐頭市場 Miglet / 國際市場",note:"光復路商店街逛街\n樂天百貨南浦 10:30~21:00 (柯達)"},
-   {t:"19:00",icon:"🦀",name:"晚餐：札嘎其市場帝王蟹100號",tags:[{t:"必吃海鮮",hot:true}]}
-  ]},
- {date:"2026-12-31",wd:"四",title:"影島景點 & 廣安里跨年",hotel:"住西面",
-  stops:[
-   {t:"09:00",icon:"🥣",name:"早餐：大海鮑魚粥 釜山店"},
-   {t:"10:30",icon:"🌊",name:"白淺灘文化村",note:"海岸隧道、彩虹階梯（排隊人潮多，建議早上上去）"},
-   {t:"12:30",icon:"🥩",name:"午餐：巨人王豬排 / 影島海女村吃海鮮"},
-   {t:"14:30",icon:"🌉",name:"五六島天空步道 & 二位臺",note:"海景步道漫步"},
-   {t:"17:30",icon:"🏬",name:"樂天百貨釜山總店 (10:30~21:00)",note:"逛街購物，逛西面地下街（不要逛南浦洞地下街）"},
-   {t:"19:00",icon:"🥩",name:"晚餐：老宅邸燒肉"},
-   {t:"23:30",icon:"🎆",name:"廣安里無人機表演",note:"在飯店看直播或現場跨年！",tags:[{t:"跨年重頭戲",hot:true}]}
-  ]},
- {date:"2027-01-01",wd:"五",title:"海雲台 & 市區展覽",hotel:"住西面",
-  stops:[
-   {t:"09:00",icon:"🥯",name:"早餐：All Sunday"},
-   {t:"10:30",icon:"🎨",name:"釜山油畫展"},
-   {t:"12:30",icon:"🍲",name:"午餐：小香燉牛肋條 / 31cm / 嚴泉湧豬肉湯飯"},
-   {t:"14:30",icon:"🛍️",name:"海雲台傳統市場 & 海雲台海水浴場",note:"順遊新世界百貨 Centum City 店 & 樂天超市 (Lotte Mart)"},
-   {t:"18:30",icon:"🍝",name:"晚餐：Cor pasta bar"},
-   {t:"20:30",icon:"🌃",name:"荒嶺山觀景台",note:"欣賞釜山千萬夜景",tags:[{t:"絕美夜景",hot:true}]}
-  ]},
- {date:"2027-01-02",wd:"六",title:"甘川洞 & 松島纜車 & 汗蒸幕",hotel:"住廣安里橘子",
-  stops:[
-   {t:"09:00",icon:"🥪",name:"早餐：Eggdrop"},
-   {t:"09:30",icon:"🎨",name:"甘川洞文化村 (手翻書)",note:"小王子拍照 09:30到 (10:30開卡)",tags:[{t:"熱門景點",hot:true}]},
-   {t:"12:30",icon:"🍕",name:"午餐：李在模披薩本店 (2號店)"},
-   {t:"14:30",icon:"🌁",name:"松島龍宮雲橋 & 松島海上纜車"},
-   {t:"16:30",icon:"🌳",name:"太宗台 & Art museum"},
-   {t:"18:30",icon:"🗼",name:"釜山塔 (10:00~22:00)"},
-   {t:"19:30",icon:"🍖",name:"晚餐：釜山烤肋排-西面店"},
-   {t:"21:30",icon:"♨️",name:"Hotel Aqua spa 24HR",note:"汗蒸幕放鬆",tags:[{t:"搬家換飯店"}]}
-  ]},
- {date:"2027-01-03",wd:"日",title:"天空膠囊列車 & 鑽石遊艇",hotel:"住廣安里橘子",
-  stops:[
-   {t:"09:00",icon:"☕",name:"早餐：Working holiday"},
-   {t:"10:30",icon:"🚃",name:"天空膠囊列車",note:"海岸列車（青沙浦拍照攻略）",tags:[{t:"必搭列車",hot:true}]},
-   {t:"12:30",icon:"🥩",name:"午餐：小香燉牛肋條 / 31cm / 嚴泉湧豬肉湯飯"},
-   {t:"14:30",icon:"🏢",name:"Busan X the Sky",note:"登高俯瞰海景"},
-   {t:"18:30",icon:"🥩",name:"晚餐：Gohasun-廣安店"},
-   {t:"20:30",icon:"⛵",name:"鑽石遊艇 (夜間版)",note:"夜間海上看廣安大橋",tags:[{t:"夜間遊艇",hot:true}]}
-  ]},
- {date:"2027-01-04",wd:"一",title:"樂天世界 & 東釜山 Outlet 採買",hotel:"住廣安里橘子",
-  stops:[
-   {t:"09:00",icon:"🍲",name:"早餐：水邊最高豬肉湯飯 (民樂店)"},
-   {t:"10:30",icon:"🎡",name:"樂天世界 (換票) & 釜山 Brick Campus"},
-   {t:"13:30",icon:"🛍️",name:"Lotte Premium Outlets 東釜山店",note:"要去哪裡玩攻略"},
-   {t:"18:30",icon:"🥩",name:"晚餐：廣安木烤肉-廣安店"},
-   {t:"20:30",icon:"🌃",name:"荒嶺山觀景台",note:"再次欣賞夜景"}
-  ]},
- {date:"2027-01-05",wd:"二",title:"最後採買 & 愉快返家",hotel:"準備返家",
-  stops:[
-   {t:"09:00",icon:"🥐",name:"早餐：自由享用"},
-   {t:"10:30",icon:"🛍️",name:"沿著西面地下街採買",note:"雙條都是兩排衣服店，輕鬆逛"},
-   {t:"12:30",icon:"🍱",name:"午餐：Nasari Sigdang"},
-   {t:"15:00",icon:"✈️",name:"前往金海機場辦理登機",note:"平安返家！"}
-  ]}
-  ];
+{date:"2026-12-29",wd:"二",title:"抵達・換釜山PASS卡・租車",area:"金海機場 → 西面",extra:PK("金海機場取車、西面住宿（請向房東確認車位）"),stops:[
+ S("18:50","✈️","抵達金海機場（去程航班）","金海機場","air",{ex:1,note:TK("去程","12/29（二）","15:40","桃園 TPE","18:50","釜山金海 PUS"),n:"김해국제공항"}),
+ S("19:30","💳","出關後換釜山PASS實體卡","換PASS卡","air",{tags:HOT("重要‼️"),n:"김해국제공항"}),
+ S("20:00","🚗","樂天租車：Carvinal","樂天租車","air",{n:"롯데렌터카 김해공항"}),
+ S("20:30","🍔","晚餐：Shake Shack 쉐이크쉑 서면점","Shake Shack","seo",{ex:1,dur:"1 hr",note:"20:30～21:30",n:"쉐이크쉑 서면점"}),
+ S("22:00","🏨","住西面 Airbnb","西面 Airbnb","seo",{note:HOTELS,n:HOTELS})]},
+{date:"2026-12-30",wd:"三",title:"南浦洞美食・市場・樂天百貨",area:"南浦洞",extra:"⚠️ <b>注意事項</b>：樂天百貨辦會員卡<br>"+PK("南浦洞／札嘎其、西面住宿"),stops:[
+ S("08:30","🥬","早餐：釜田市場 부산부전시장","釜田市場","jeon",{n:"부산부전시장"}),
+ S("10:00","☕","田浦咖啡街 전포카페거리","田浦咖啡街","cafe",{n:"전포카페거리"}),
+ S("12:00","🐷","午餐：豚笑-南浦店（11點準時預約）","豚笑南浦店","nampo",{h:"午餐：豚笑-南浦店<span class=\"r\">（11點準時預約）</span>",tags:HOT("重要‼️ 準時預約"),n:"豚笑 남포점"}),
+ S("13:30","🥫","BIFF 廣場、富平罐頭市場 Miglet、國際市場","BIFF・國際市場","biff",{n:[["BIFF 廣場","BIFF광장"],["富平罐頭市場","부평깡통시장"],["國際市場","국제시장"]]}),
+ S("15:30","🛍️","光復路商店街","光復路","gwang",{n:"광복로패션거리"}),
+ S("16:30","🏬","樂天百貨南浦（10:30–21:00）","樂天南浦","lotteN",{note:"（柯達）",n:"롯데백화점 광복점"}),
+ S("18:30","🦀","晚餐：札嘎其市場帝王蟹 100 號 / 新東南亞市場 20 號","札嘎其市場","jaga",{n:[["札嘎其市場","자갈치시장"],["新東南亞市場","신동아시장 자갈치"]]}),
+ S("21:00","🏨","住西面 Airbnb","西面 Airbnb","seo",{note:HOTELS,n:HOTELS})]},
+{date:"2026-12-31",wd:"四",title:"影島・五六島・西面逛街",area:"影島 / 五六島",extra:PK("白淺灘（影島）、五六島・二妓臺、西面住宿"),stops:[
+ S("08:00","🍲","早餐：大海鮑魚粥 釜山店","大海鮑魚粥","abal",{n:"대해전복죽 부산"}),
+ S("09:30","🏘️","白淺灘文化村","白淺灘","huin",{n:"흰여울문화마을"}),
+ S("10:45","🌈","海岸隧道、彩虹階梯","彩虹階梯","rainbow",{tags:HOT("排隊人潮多，建議早上去"),n:"흰여울해안터널"}),
+ S("12:30","🦐","午餐：巨人王豬排 / 影島海女村吃海鮮","影島海女村","haenyeo",{n:[["影島海女村","영도 해녀촌"],["巨人王豬排","巨人王豬排 부산"]]}),
+ S("14:30","🌉","五六島天空步道","五六島","oryuk",{n:"오륙도스카이워크"}),
+ S("15:30","🌊","二妓臺","二妓臺","igi",{n:"이기대 공원"}),
+ S("17:00","🏬","樂天百貨釜山總店（10:30–21:00）","樂天釜山總店","lotteS",{n:"롯데백화점 부산본점"}),
+ S("18:00","🛒","西面地下街","西面地下街","underS",{note:"不要逛南浦洞地下街",n:"서면지하상가"}),
+ S("19:00","🥩","晚餐：老宅邵燒肉 Old Mansion","老宅邵燒肉","sbbq",{n:"Old Mansion 서면"}),
+ S("20:30","🎆","廣安里無人機表演（在飯店看直播）","無人機秀","seo",{note:"時間請以官方公告為準"}),
+ S("22:00","🏨","住西面 Airbnb","西面 Airbnb","seo",{note:HOTELS,n:HOTELS})]},
+{date:"2027-01-01",wd:"五",title:"海雲台・Centum City",area:"海雲台",extra:PK("海雲台、Centum City、西面住宿"),stops:[
+ S("09:00","🥞","早餐：All Sunday 海雲台","All Sunday","allsun",{n:"올선데이 해운대"}),
+ S("10:30","🖼️","釜山油畫展 Grand Josun Busan","油畫展","josun",{n:"그랜드 조선 부산"}),
+ S("12:30","🍖","午餐：小香燉牛肋條 소초갈비집","午餐","lunchB",{n:"소초갈비집"}),
+ S("14:00","🏪","海雲台傳統市場","傳統市場","hmarket",{n:"해운대전통시장"}),
+ S("15:30","🏖️","海雲台海水浴場","海水浴場","hbeach",{n:"해운대해수욕장"}),
+ S("16:30","🛍️","新世界百貨 Centum City 店","Centum City","centum",{n:"신세계 센텀시티"}),
+ S("18:00","🛒","樂天超市（Lotte Mart）","樂天超市","lmart",{n:"롯데마트 해운대"}),
+ S("19:00","🍝","晚餐：Cor pasta bar","Cor pasta","cor",{n:"Cor pasta bar 부산"}),
+ S("21:00","🏨","住西面 Airbnb","西面 Airbnb","seo",{note:HOTELS,n:HOTELS})]},
+{date:"2027-01-02",wd:"六",title:"甘川洞・松島・釜山塔",area:"甘川洞 / 松島",extra:PK("甘川洞、松島（含雷射槍競技場）、南浦／釜山塔、廣安里住宿"),stops:[
+ S("08:30","🥚","早餐：Eggdrop","Eggdrop","eggN",{n:"에그드랍 남포동점"}),
+ S("09:30","📖","甘川洞文化村（手翻書）＋ 小王子拍照","甘川洞","gam",{ex:1,tags:HOT("重要‼️ 小王子拍照 09:30 到（10:30 開卡）"),n:"감천문화마을"}),
+ S("12:30","🍕","午餐：李在模披薩本店（2 號店）","李在模披薩","pizza",{n:[["本店","이재모피자 본점"],["2 號店","이재모피자 2호점"]]}),
+ S("14:00","🌉","松島龍宮雲橋","龍宮雲橋","songB",{n:"송도용궁구름다리"}),
+ S("15:00","🚡","松島海上纜車","海上纜車","songC",{n:"송도해상케이블카"}),
+ S("16:30","🎯","松島雷射槍競技場（레이저아레나송도）","雷射槍競技場","songL",{n:"레이저아레나송도"}),
+ S("17:30","🎨","Art museum","Art museum","artm",{n:"Art museum 부산"}),
+ S("18:30","🗼","釜山塔（10:00–22:00）","釜山塔","tower",{n:"부산타워"}),
+ S("19:30","🥩","晚餐：釜山烤肋排-西面店","烤肋排","galbi",{n:"부산 갈비 서면"}),
+ S("21:30","🏨","住廣安里橘子 Airbnb","廣安里 Airbnb","hotelG",{note:HOTELG,n:HOTELG})]},
+{date:"2027-01-03",wd:"日",title:"海岸列車・鑽石遊艇夜遊",area:"青沙浦 / 廣安里",extra:PK("海雲台、青沙浦、廣安里住宿"),stops:[
+ S("09:00","🥞","早餐：Working holiday","Working holiday","work",{n:"Working Holiday 광안리"}),
+ S("10:00","🛍️","逛街","逛街","shop"),
+ S("12:00","🍜","午餐：嚴湧帛豬肉湯飯（엄용백돼지국밥）","午餐","lunchB",{n:"엄용백돼지국밥 해운대"}),
+ S("13:30","🚃","海岸列車（青沙浦拍照攻略）","海岸列車","train",{note:"原表格附攻略連結",n:"청사포 해변열차"}),
+ S("15:00","🚠","天空膠囊列車","天空膠囊","capsule",{n:"청사포 스카이캡슐"}),
+ S("16:30","🧱","釜山 Brick Campus（10:30 開門）","Brick Campus","brick",{n:"부산 브릭캠퍼스"}),
+ S("17:30","🎡","Busan X the Sky","X the Sky","xsky",{n:"부산엑스더스카이"}),
+ S("19:00","🍖","晚餐：Gohasun-廣安店","Gohasun","gohasun",{n:"Gohasun 광안"}),
+ S("20:30","⛵","鑽石遊艇（夜間版）","鑽石遊艇","yacht",{n:"다이아몬드 요트 부산"}),
+ S("22:00","♨️","Hotel Aqua spa 24HR","Aqua spa","spa",{n:"호텔 아쿠아 스파 광안리"}),
+ S("23:00","🏨","住廣安里橘子 Airbnb","廣安里 Airbnb","hotelG",{note:HOTELG,n:HOTELG})]},
+{date:"2027-01-04",wd:"一",title:"樂天世界・海東龍宮寺",area:"機張",extra:PK("機張（樂天世界、龍宮寺、Outlet）、荒嶺山、廣安里住宿"),stops:[
+ S("08:30","🍲","早餐：水邊最高豬肉湯飯（民樂店）","豬肉湯飯","millak",{n:"수변최고돼지국밥 민락점"}),
+ S("09:30","🎢","樂天世界（09:30 換票 / 10:00 開門）","樂天世界","lotteW",{ex:1,n:"롯데월드 어드벤처 부산"}),
+ S("14:00","🏯","海東龍宮寺","龍宮寺","yong",{n:"해동용궁사"}),
+ S("15:30","🛍️","Lotte Premium Outlets 東釜山店","Premium Outlets","outlet",{n:"롯데프리미엄아울렛 동부산점"}),
+ S("18:30","🍖","晚餐：廣安木烤肉-廣安店 광안목 광안점","廣安木烤肉","bbq",{n:"광안목 광안점"}),
+ S("20:30","🌃","荒嶺山觀景台 황령산 전망대","荒嶺山","hwang",{n:"황령산 전망대"}),
+ S("22:00","🏨","住廣安里橘子 Airbnb","廣安里 Airbnb","hotelG",{note:HOTELG,n:HOTELG})]},
+{date:"2027-01-05",wd:"二",title:"海邊走走・午餐・返程",area:"廣安里",extra:PK("廣安里、金海機場（還車）"),stops:[
+ S("09:30","🌊","海邊走走晃晃","廣安里海邊","gbeach",{n:"광안리해수욕장"}),
+ S("12:00","🍜","午餐：Nasari Sigdang 나사리식당","Nasari","nasari",{n:"나사리식당"}),
+ S("19:50","✈️","回程班機（19:50 起飛）","金海機場","air",{ex:1,note:TK("回程","1/5（二）","19:50","釜山金海 PUS","21:30","桃園 TPE")+"<br>建議提早還車、提早抵達機場。",n:"김해국제공항"})]}
+];
+const STARTS=[null,["seo","08:00"],["seo","07:30"],["seo","08:30"],["seo","08:00"],["hotelG","08:30"],["hotelG","08:00"],["hotelG","09:00"]];
+DAYS.forEach((d,i)=>{const st=STARTS[i];if(!st)return;const sx=st[0]==="seo",ad=sx?HOTELS:HOTELG;
+ d.stops.unshift(S(st[1],"🏨","住宿出發 Airbnb",sx?"西面 Airbnb":"廣安里 Airbnb",st[0],{note:ad,n:ad}))});
+const PARK=[
+{e:"🏨",a:"西面（Airbnb 住宿）",d:"Day 1–5",s:[["西面住宿 Airbnb",HOTELS+" 주차장","Koro 無此區資料，請向房東確認是否有車位／收費"],["西面商圈公共停車場","서면 공영주차장","用 NAVER 查詢現場即時資訊"]],tip:"Koro 指南提醒：西面、海雲台周邊週末車多易塞車。"},
+{e:"🦀",a:"南浦洞・札嘎其・釜山塔",d:"Day 2、5",s:[["札嘎其市場附近","자갈치시장 주차장","Koro：附近有付費公共停車場（費率未列）"],["南浦洞／光復路","남포동 주차장","Koro 無資料，用 NAVER 查詢"],["釜山塔（龍頭山公園）","용두산공원 주차장","Koro 無資料，用 NAVER 查詢"]]},
+{e:"🏘️",a:"影島（白淺灘）",d:"Day 3",s:[["絕影海岸步道停車場（白淺灘）","절영해안산책로 주차장","每 10 分鐘 ₩200／每日最高 ₩4,700；車位很快滿"]],tip:"白淺灘是居民區，Koro 提到遊客違停與居民有衝突，建議停好後步行。"},
+{e:"🌉",a:"五六島・二妓臺",d:"Day 3",s:[["五六島天空步道公共停車場","오륙도스카이워크 주차장","每 10 分鐘 ₩300／每日最高 ₩8,000"],["二妓臺停車場","이기대 주차장","Koro：免費（可由二妓臺或五六島側進入步道）"]]},
+{e:"🎨",a:"甘川洞・松島",d:"Day 5",s:[["甘川文化村停車場／甘川2洞市場","감천문화마을 주차장","每 10 分鐘 ₩100／每日最高 ₩2,400；建議 9 點前或 16 點後到"],["松島海灘停車場","송도해수욕장 주차장","3 小時 ₩3,000（可順遊天空步道、海上纜車）"],["松島雷射槍競技場","레이저아레나송도 주차장","Koro 無資料，用 NAVER 查詢"]]},
+{e:"🏖️",a:"海雲台・青沙浦",d:"Day 4、6",s:[["海雲台海灘附近公共停車場","해운대해수욕장 주차장","約每小時 ₩2,000–3,000"],["Centum City／新城區","센텀시티 주차장","Koro：新城區有多個私人停車場"],["青沙浦（海岸列車、天空膠囊）","청사포 주차장","Koro 無資料，用 NAVER 查詢"]]},
+{e:"🌃",a:"廣安里・民樂・荒嶺山（Airbnb 住宿）",d:"Day 5–8",s:[["廣安里住宿 Airbnb",HOTELG+" 주차장","請向房東確認是否有車位／收費"],["廣安里海水浴場周邊","광안리해수욕장 주차장","Koro 無資料，用 NAVER 查詢"],["荒嶺山觀景台","황령산 전망대 주차장","Koro 夜景路線：從延堤區上山、往水營區方向下山；山路窄彎多"]],tip:"Koro 指南：廣安大橋過橋費約 ₩1,000–2,000，尖峰時段 Hi-Pass 5 折（實際請以現場為準）。"},
+{e:"🎢",a:"機張（龍宮寺・樂天世界）",d:"Day 7",s:[["海東龍宮寺停車場","해동용궁사 주차장","30 分鐘 ₩2,000（之後每 10 分鐘 +₩500）／全天 ₩20,000；只收刷卡；12–15 點人最多"],["樂天世界","롯데월드 어드벤처 부산 주차장","Koro 無資料，用 NAVER 查詢"],["Lotte Premium Outlets 東釜山","롯데프리미엄아울렛 동부산점 주차장","Koro 無資料，用 NAVER 查詢"]]}
+];
+function renderParking(){
+ const g=document.getElementById("pkGrid");if(!g)return;
+ g.innerHTML=PARK.map(c=>`<div class="pk-card"><h3><span aria-hidden="true">${c.e}</span>${c.a}<small>${c.d}</small></h3><ul>${c.s.map(([z,n,d])=>`<li><b>${z}</b><a href="${NV(n)}" target="_blank" rel="noopener">🅿️ NAVER</a><span class="d">${d}</span></li>`).join("")}</ul>${c.tip?`<div class="pk-tip">💡 ${c.tip}</div>`:""}</div>`).join("");
+}
+renderParking();
 
 const W=1000,H=680;
 const $=s=>document.getElementById(s);
@@ -641,7 +704,7 @@ function selectDay(i,keepTime){
   document.querySelectorAll(".ticket").forEach(t=>t.setAttribute("aria-selected",t.id==="tab"+i?"true":"false"));
   const d=DAYS[i]; if(!d._nodes) layout(d);
   if(!keepTime) cur=d.stops[0].m;
-  $("dayHead").innerHTML=`<h2><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#${PALS[i%6].id}"/></svg>Day ${i+1}：${d.title}</h2><span class="meta">${d.date.replaceAll("-","/")}（${d.wd}）・${d.area}</span><span class="budget">當日合計 ${yen(d.total)}</span>`;
+  $("dayHead").innerHTML=`<h2><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#${PALS[i%6].id}"/></svg>Day ${i+1}：${d.title}</h2><span class="meta">${d.date.replaceAll("-","/")}（${d.wd}）・${d.area}</span>${d.total?`<span class="budget">當日合計 ${yen(d.total)}</span>`:""}`;
   renderMap(d,i);renderList(d);
   const sl=$("slider");sl.min=d._start;sl.max=d._end;sl.value=cur;
   update();
@@ -673,7 +736,7 @@ function renderMap(d,i){
     const label=n.stops.map(s=>s.short).filter((v,idx,a)=>a.indexOf(v)===idx).join("・");
     let txt=`${s0.t} ${label}`; if(txt.length>17)txt=txt.slice(0,16)+"…";
     const lab=el("g",{class:"lab",transform:"translate(0,44)"},gp);
-    const tw=txt.length*15*0.78+22;
+    const tw=txt.length*17*0.82+22;
     el("rect",{x:-tw/2,y:-13,width:tw,height:26,rx:13},lab);
     el("text",{},lab).textContent=txt;
     const go=()=>{setLive(false);pause();cur=s0.m;update()};
@@ -696,11 +759,11 @@ function renderList(d){
     const tm=s.team?teamOf(s.team):null;
     const tags=(tm?`<span class="team-tag${tm.ti?" t1":""}">${tm.name}</span>`:"")+(s.tags||[]).map(t=>`<span class="tag${t.hot?" hot":""}">${t.t}</span>`).join("");
     const sub=[s.sub,s.mode&&`交通：${s.mode}`,s.dur&&`約 ${s.dur}`,s.cost&&yen(s.cost)].filter(Boolean).join("／");
-    li.innerHTML=`<div class="t">${s.t}</div><div><div class="card" role="button" tabindex="0">
-      <div class="name"><span aria-hidden="true">${s.icon}</span><span>${s.name}</span></div>
+    li.innerHTML=`<div class="t">${s.ex?"":"<small>約</small>"}${s.t}</div><div><div class="card" role="button" tabindex="0">
+      <div class="name"><span aria-hidden="true">${s.icon}</span><span>${s.h||s.name}</span></div>
       ${sub?`<div class="sub">${sub}</div>`:""}
       ${s.note?`<div class="note">${s.note}</div>`:""}${tags}
-      ${s.maps?`<div class="links${s.maps.length>3?" stack":""}">${s.maps.map(m=>`<a href="${m.url}" target="_blank" rel="noopener">${m.label}</a>`).join(" ")}</div>`:s.map?`<div class="links"><a href="${s.map}" target="_blank" rel="noopener">📍 Google 地圖</a></div>`:""}
+      ${s.maps?`<div class="links${s.maps.length>3?" stack":""}">${s.maps.map(m=>`<a href="${m.url}" target="_blank" rel="noopener">${m.label}</a>`).join(" ")}</div>`:s.map?`<div class="links"><a href="${s.map}" target="_blank" rel="noopener">📍 NAVER 地圖</a></div>`:""}
     </div></div>`;
     const card=li.querySelector(".card");
     const go=e=>{if(e.target.closest("a"))return;setLive(false);pause();cur=s.m;update()};
@@ -709,6 +772,7 @@ function renderList(d){
   });
   if(d.links){const li=document.createElement("li");li.className="stop empty-row";
     li.innerHTML=`<div class="t"></div><div><div class="card">${d.links.map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join(" ")}</div></div>`;ol.appendChild(li)}
+  if(d.extra){const li=document.createElement("li");li.className="stop empty-row";li.innerHTML=`<div class="t"></div><div><div class="card">${d.extra}</div></div>`;ol.appendChild(li)}
   const chip=pi=>`<span class="pal-chip"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#${PALS[pi].id}"/></svg>${PALS[pi].name}</span>`;
   $("pals").innerHTML=d.teams
     ? d._teams.map(tm=>`<span class="team-tag${tm.ti?" t1":""}">${tm.name}</span>${tm.pals.map(chip).join("")}`).join("<span style='width:12px'></span>")
@@ -770,7 +834,7 @@ $("slider").oninput=e=>{setLive(false);pause();cur=+e.target.value;update()};
 $("speedBtn").onclick=()=>{speed=SPEEDS[(SPEEDS.indexOf(speed)+1)%SPEEDS.length];$("speedBtn").textContent="×"+speed};
 
 function tokyoNow(){
-  const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(new Date());
+  const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(new Date());
   const g=t=>p.find(x=>x.type===t).value;
   return {date:`${g("year")}-${g("month")}-${g("day")}`,min:(+g("hour")%24)*60+ +g("minute")+ +g("second")/60};
 }
@@ -781,10 +845,10 @@ function setLive(on){
   if(on){
     const n=tokyoNow();const i=DAYS.findIndex(d=>d.date===n.date);
     if(i<0){live=false;$("liveBtn").setAttribute("aria-pressed","false");
-      toast(`現在日本時間 ${n.date.slice(5).replace("-","/")} ${fmt(n.min)}，旅程期間（10/29–11/03）才會即時對照；先按 ▶ 模擬播放吧 ✨`);return}
+      toast(`現在韓國時間 ${n.date.slice(5).replace("-","/")} ${fmt(n.min)}，旅程期間（12/29–1/5）才會即時對照；先按 ▶ 模擬播放吧 ✨`);return}
     if(i!==dayIdx||posterOn)selectDay(i,true);
     const tick=()=>{cur=tokyoNow().min;update()};tick();liveTimer=setInterval(tick,15000);
-    toast(`已對照日本時間 ${fmt(cur)}`);
+    toast(`已對照韓國時間 ${fmt(cur)}`);
   }
 }
 $("liveBtn").onclick=()=>setLive(!live);
@@ -799,11 +863,11 @@ function setBrand(nextBrand){
   $("titleMascots").innerHTML=[0,1,2].map(i=>`<svg viewBox="0 0 64 64"><use href="#${PALS[i].id}"/></svg>`).join("");
   $("tipsMascots").innerHTML=[1,0].map(i=>`<svg viewBox="0 0 64 64"><use href="#${PALS[i].id}"/></svg>`).join("");
   $("headerSub").textContent=isSanrio
-    ? "10/29（四）– 11/03（二）・三麗鷗大明星陪你走完每一天 🎀"
-    : "10/29（四）– 11/03（二）・吉依卡哇與夥伴們陪你走完每一天 ✨";
+    ? "12/29（二）– 1/5（二）・三麗鷗大明星陪你走完每一天 🎀"
+    : "12/29（二）– 1/5（二）・吉依卡哇與夥伴們陪你走完每一天 ✨";
   $("posterTitle").innerHTML=isSanrio
-    ? `🎀 三麗鷗帶你遊！大阪六日秋日攻略地圖 <small>(2026年10月29日 - 11月3日)</small> 🎀`
-    : `✨ 吉依卡哇帶你遊！大阪六日秋日攻略地圖 <small>(2026年10月29日 - 11月3日)</small> ✨`;
+    ? `🎀 三麗鷗帶你遊！釜山八日冬日攻略地圖 <small>(2026年12月29日 - 2027年1月5日)</small> 🎀`
+    : `✨ 吉依卡哇帶你遊！釜山八日冬日攻略地圖 <small>(2026年12月29日 - 2027年1月5日)</small> ✨`;
   $("posterHint").textContent=isSanrio
     ? "🎀 點擊任一景點插畫，即可跳轉至該日互動散步地圖與時間軸！"
     : "🐾 點擊任一景點插畫，即可跳轉至該日互動散步地圖與時間軸！";
@@ -853,9 +917,9 @@ $("themeBtn").onclick=()=>{
 let toastT;function toast(t){const e=$("toast");e.textContent=t;e.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove("show"),3800)}
 
 /* ---------- 攻略地圖總覽 ---------- */
-const ART={"✈️":"plane","⛩️":"torii","🏯":"pagoda","🎢":"coaster","🛍️":"bag","🍢":"tower","🏨":"hotel","🚐":"bus","🦀":null};
+const ART={"✈️":"plane","⛩️":"torii","🏯":"pagoda","🎢":"coaster","🛍️":"bag","🍢":"tower","🏨":"hotel","🚐":"bus","🦀":null,"🚗":"bus","🗼":"tower","🎡":"ferris","⛵":"ship"};
 const BLOBS=["var(--blob1)","var(--blob2)","var(--blob3)","var(--blob4)"];
-const DAYTITLE=["抵達與心齋橋逛街","USJ・梅田分頭玩","難波電器街掃貨","神戶牛與通天閣","京都稻荷・清水寺","蟹道樂與返台"];
+const DAYTITLE=["換PASS卡・租車","南浦洞美食市集","影島・五六島","海雲台・Centum","甘川洞・松島","海岸列車・遊艇","樂天世界・龍宮寺","豬肉湯飯・午餐"];
 let posterOn=false;
 function renderPoster(){
   const g=$("pgrid");g.innerHTML='<svg class="plinks" id="plinks" aria-hidden="true"></svg>';walkers.length=0;
@@ -865,14 +929,14 @@ function renderPoster(){
     const col=document.createElement("div");col.className="pcol";
     const [,mo,da]=d.date.split("-");
     col.innerHTML=`<h3>Day ${di+1} : ${DAYTITLE[di]}<br><span class="sub-date">${+mo}/${+da}（${d.wd}）</span></h3>`;
-    d.stops.filter(s=>s.p&&!/飯店出發/.test(s.name)).forEach((s,k)=>{
+    d.stops.filter(s=>s.p&&!/住宿出發/.test(s.name)).forEach((s,k)=>{
       const b=document.createElement("button");b.type="button";b.className="pitem";
       const art=ART[s.icon];
       const vis=art?`<svg class="art" viewBox="-50 -50 100 100" aria-hidden="true">${DOODLE[art]}</svg>`:`<span class="emo" aria-hidden="true">${s.icon}</span>`;
       const tm=s.team?d._teams.find(t=>t.id===s.team):null;
       const extra=[s.cost?yen(s.cost):"",(s.tags||[]).map(t=>t.t).join("・")].filter(Boolean).join("・");
       b.innerHTML=`<span class="vig" style="background:${BLOBS[blobI++%4]}">${vis}</span>
-        <span class="nm">${s.name}</span><span class="tm">(${s.t})</span>
+        <span class="nm">${s.short||s.name}</span><span class="tm">(${s.t})</span>
         ${extra?`<span class="ex">${extra}</span>`:""}${tm?`<span class="team-tag${tm.ti?" t1":""}">${tm.name}</span>`:""}`;
       b.onclick=()=>{selectDay(di);cur=s.m;update();window.scrollTo({top:$("days").offsetTop-10,behavior:reduced?"auto":"smooth"})};
       col.appendChild(b);
@@ -895,7 +959,7 @@ function posterWalk(ts){
     if(!items.length){wk.w.style.display="none";return}
     const C=wk.col.getBoundingClientRect();
     const pts=items.map((v,i)=>{const r=v.getBoundingClientRect();const side=(i%2?-1:1);
-      return {x:r.left-C.left+r.width/2+side*(r.width/2+2)-24,y:r.bottom-C.top-36}});
+      return {x:r.left-C.left+r.width/2+side*(r.width/2+2)-16,y:r.bottom-C.top-24}});
     const n=pts.length;
     if(wk.t0==null)wk.t0=ts-wi*500;
     const cycle=(n-1)*(WALK_HOP+WALK_STAY)+WALK_END;
@@ -930,9 +994,9 @@ function drawLinks(){
   cols.forEach((c,ci)=>{
     const items=[...c.querySelectorAll(".pitem")].map(v);
     for(let i=1;i<items.length;i++){const a=items[i-1],b=items[i];
-      const x1=a.cx+(i%2?26:-26),y1=a.bot-4,x2=b.cx+(i%2?-20:20),y2=b.top+2;
-      const cx=(x1+x2)/2+(i%2?40:-40), cy=(y1+y2)/2;
-      out+=`<path class="plink" d="M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}"/>`+head(x2,y2,Math.atan2(y2-cy,x2-cx))+star(cx+(i%2?10:-10),cy);
+      const x1=a.cx+(i%2?18:-18),y1=a.bot-4,x2=b.cx+(i%2?-14:14),y2=b.top+2;
+      const cx=(x1+x2)/2+(i%2?26:-26), cy=(y1+y2)/2;
+      out+=`<path class="plink" d="M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}"/>`+head(x2,y2,Math.atan2(y2-cy,x2-cx))+star(cx+(i%2?7:-7),cy);
     }
     if(ci<cols.length-1&&items.length){
       const a=items[items.length-1],nb=[...cols[ci+1].querySelectorAll(".pitem")].map(v)[0];if(!nb)return;
